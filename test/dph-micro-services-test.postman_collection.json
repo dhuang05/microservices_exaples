@@ -72,11 +72,11 @@
 		{
 			"name": "credit to account",
 			"request": {
-				"method": "PATCH",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"accountId\": \"1\",\n    \"amount\": \"10\"\n}",
+					"raw": "{\n    \"accountId\": \"2\",\n    \"amount\": \"10\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -110,12 +110,33 @@
 			"response": []
 		},
 		{
-			"name": "list log",
+			"name": "list logs",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list conflict logs (last day)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/conflictLogs/2020-09-20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"conflictLogs",
+						"2020-09-20"
+					]
 				}
 			},
 			"response": []

@@ -40,6 +40,12 @@ bin/
 /bin/
 build/
 /build
+**/logs
 transaction-logs
 /transaction-logs
-!**/transaction-logs
+**/transaction-logs
+**/*.jar
+**/**/tmlog.lck
+*/*/*.log
+*/logs
+
