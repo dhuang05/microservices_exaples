@@ -1,0 +1,13 @@
+rootProject.name = 'dph-cloud-tx-micoservices'
+include 'eureka-server',
+'common-shared',
+	'zuul-server',
+        'account-api',
+        'payment-booking-api',
+	'inventory-api',
+        'order-api',
+	'audit-log-api',
+	'sale-system'
+
+
+

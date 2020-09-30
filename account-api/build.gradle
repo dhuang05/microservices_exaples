@@ -1,0 +1,71 @@
+plugins {
+id 'org.springframework.boot' version '2.3.3.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+   
+
+group 'com.nusino.lab.microservices.account-api'
+version '1.0-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+ springCloudVersion="Hoxton.SR8"
+ springBootVersion="Horsham.SR8"
+ springCloudStreamVersion="3.0.8.RELEASE"
+ seataVersion="2.2.3.RELEASE"
+ feignReactorVersion="2.0.15"
+}
+
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.springframework.boot:spring-boot-starter-jta-atomikos")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+	implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
+	implementation("org.springframework.cloud:spring-cloud-starter-zipkin")
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-zuul")
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-ribbon")
+	
+	implementation("org.springframework.cloud:spring-cloud-stream")
+    implementation("org.springframework.cloud:spring-cloud-starter-stream-kafka")
+    implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
+ 	implementation("org.springframework.cloud:spring-cloud-function-context")
+
+	
+	implementation("com.playtika.reactivefeign:feign-reactor-spring-cloud-starter:${feignReactorVersion}")
+	implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-seata:${seataVersion}")
+	 	
+ 	implementation(project(':common-shared'))
+	
+	compileOnly("org.projectlombok:lombok")
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	runtimeOnly("mysql:mysql-connector-java")
+	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+	annotationProcessor("org.projectlombok:lombok")
+	testImplementation("io.projectreactor:reactor-test")
+	testImplementation("org.springframework.cloud:spring-cloud-stream-test-support:${springCloudStreamVersion}")
+}
+
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		mavenBom "org.springframework.cloud:spring-cloud-stream-dependencies:${springBootVersion}"
+
+		
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+

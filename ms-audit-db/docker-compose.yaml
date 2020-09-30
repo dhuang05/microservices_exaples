@@ -1,0 +1,16 @@
+version: '3'
+services:
+  micro_service_mysql_3307:
+    # image: mysql:8.0
+    build:
+      context: .
+    container_name: micro-service-mysql-3307
+    command: mysqld --user=root
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: "micro_service_db"
+      MYSQL_USER: "dph"
+      MYSQL_PASSWORD: "N0Passw0rd"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: "N0Passw0rd"

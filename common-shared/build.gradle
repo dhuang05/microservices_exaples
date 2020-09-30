@@ -1,0 +1,43 @@
+plugins {
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java-library'
+	id 'maven-publish'
+}
+
+group 'com.nusino.lab.microservices.common-shared'
+version '1.0-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+}
+
+
+ext {
+ springCloudVersion="Hoxton.SR8"
+ springBootVersion="Horsham.SR8"
+ springCloudStreamVersion="3.0.8.RELEASE"
+ seataVersion="2.2.3.RELEASE"
+ feignReactorVersion="2.0.15"
+}
+
+dependencies {
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-zuul")
+	implementation("org.springframework.cloud:spring-cloud-stream")
+    implementation("org.springframework.cloud:spring-cloud-starter-stream-kafka")
+    implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka")
+	implementation("com.playtika.reactivefeign:feign-reactor-spring-cloud-starter:${feignReactorVersion}")
+	implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-seata:${seataVersion}")
+
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		mavenBom "org.springframework.cloud:spring-cloud-stream-dependencies:${springBootVersion}"
+	}
+}
+
+
+test {
+	useJUnitPlatform()
+}

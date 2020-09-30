@@ -1,0 +1,8 @@
+[2020-09-27 10:12:58,834] INFO [GroupCoordinator 0]: Preparing to rebalance group input-group-auditlog in state PreparingRebalance with old generation 70 (__consumer_offsets-22) (reason: Adding new member consumer-input-group-auditlog-2-3511d5b2-77c6-476f-a1ad-53968875263f with group instance id None) (kafka.coordinator.group.GroupCoordinator)
+[2020-09-27 10:12:58,836] INFO [GroupCoordinator 0]: Stabilized group input-group-auditlog generation 71 (__consumer_offsets-22) (kafka.coordinator.group.GroupCoordinator)
+[2020-09-27 10:12:58,837] INFO [GroupCoordinator 0]: Assignment received from leader for group input-group-auditlog for generation 71 (kafka.coordinator.group.GroupCoordinator)
+[2020-09-27 10:19:15,847] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 5 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2020-09-27 10:29:15,838] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 4 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2020-09-27 10:39:15,831] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 3 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2020-09-27 10:49:15,850] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2020-09-27 10:59:15,853] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 2 milliseconds. (kafka.coordinator.group.GroupMetadataManager)

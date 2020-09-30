@@ -1,0 +1,3 @@
+[2020-09-27 08:40:23,186] INFO [GroupCoordinator 0]: Member consumer-input-group-auditlog-2-0f999656-cb17-4458-92c6-613742e90e4a in group input-group-auditlog has failed, removing it from the group (kafka.coordinator.group.GroupCoordinator)
+[2020-09-27 08:40:23,187] INFO [GroupCoordinator 0]: Preparing to rebalance group input-group-auditlog in state PreparingRebalance with old generation 69 (__consumer_offsets-22) (reason: removing member consumer-input-group-auditlog-2-0f999656-cb17-4458-92c6-613742e90e4a on heartbeat expiration) (kafka.coordinator.group.GroupCoordinator)
+[2020-09-27 08:40:23,187] INFO [GroupCoordinator 0]: Group input-group-auditlog with generation 70 is now empty (__consumer_offsets-22) (kafka.coordinator.group.GroupCoordinator)

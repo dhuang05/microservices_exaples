@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON *.* to dph@'%';
+GRANT XA_RECOVER_ADMIN ON *.* TO dph@'%';
